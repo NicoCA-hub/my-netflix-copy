@@ -1,0 +1,317 @@
+/* Global Styles */
+:root{
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    background: black;
+    margin: 0;
+}
+img{
+    width: 100%;
+}
+.btn{
+    background: var(--primary-color);
+    border: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    outline: 0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+}
+.btn:hover{
+    opacity: 0.9;
+}
+/* Hero Content */
+#hero{
+    background-image: url('https://i.ibb.co/vXqDmnh/background.jpg');
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/* Kind of a ghost element */
+/* For doing an overlay over the image */
+#hero::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* A z layer, the bigger the number the near it is to you */
+    z-index: 1;
+    background: rgba(0,0,0,0.6);
+    box-shadow: inset 120px 100px 250px black, inset -120px -100px 250px black;
+}
+#hero-top{
+    position: relative;
+    height: 90px;
+    z-index: 2;
+}
+/* Can be also called #hero-top img{} */
+#logo{
+    position: absolute;
+    width: 170px;
+    top: 50%;
+    left: 50%;
+    /* Avoid adding the image width and height (Put it in the middle) */
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+/* Can be also calle #hero-top a{} */
+#link-signin{
+    padding: 5px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    /* Avoid adding the link width and height */
+    transform: translate(-50%, -50%);
+}
+#hero_elements{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 2;
+}
+#hero-title{
+    font-size: 75px;
+    margin: 0;
+}
+.btn-principal{
+    border-radius: 3px;
+    padding: 16px 16px;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+/* Tabs Content */
+#tabs{
+    background: var(--dark-color);
+    color:#999;
+    border-bottom: 3px solid #3d3d3d;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.slc{
+    text-align: center;
+    padding: 25px 0 10px;
+}
+.slc:hover{
+    color:white;
+    border-bottom: var(--primary-color) 5px solid;
+    cursor: pointer;
+}
+/* Tab 1 Content */
+#tab1-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+#img-tab1{
+    width: 500px;
+}
+/* Hero and tabs title style */
+.title-tab{
+    color: white;
+    font-size: 24px;
+}
+/* Tabs button style */
+.btn-tab{
+    width: 300px;
+    height: 50px;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+/* Tab 2 Content */
+#tab2-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px auto 0;
+    width: 70%;
+}
+#upper-tab2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+#lower-tab2{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    gap:15px
+}
+.optc{
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding: 0 10px;
+}
+.divice{
+    object-fit:contain;
+    height: 50%;
+}
+.text-md{
+    color: white;
+    font-size: 16;
+}
+.text-down{
+    color: #999;
+    font-size: 10;
+    margin-bottom: 0;
+}
+/* Tab 3 Content */
+#tab3-content{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    align-items: center;
+}
+#table-benefits{
+    margin-top: 50px;
+    color: #999;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+/* Add padding to the table head and data */
+#table-benefits th, td{
+    padding: 8px 15px;
+}
+/* Align only one column of the table */
+#table-benefits td:first-child{
+    text-align: left;
+}
+/* Color only the even rows */
+#table-benefits tr:nth-child(even){
+    background: var(--dark-color);
+}
+/* Hide Tabs */
+#tab1{
+    display: block;
+}
+#tab2, #tab3{
+    display: none;
+}
+/* .show{
+    display:block !important;
+} */
+/* Footer Content */
+footer{
+    color: #999;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto 20px;
+    width: 80%;
+}
+#list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+.info{
+    list-style: none;
+    margin: 0 0 15px;
+    padding: 0;
+}
+#lang{
+    background-color: black;
+    color: #999;
+    width: 80px;
+}
+/* Depending on the size of the window */
+@media (max-width: 960px){
+    #hero{
+        height: 70vh;
+    }
+    #logo{
+        top: 50%;
+        left: 5%;
+        margin: 0;
+        transform: translate(0%, -50%);
+    }
+    #hero-title{
+        font-size: 69;
+    }
+    .opt-text{
+        display:none;
+    }
+    .slc{
+        padding: 20px 0 20px;
+    }
+    .title-tab{
+        font-size: 20px;
+    }
+    .btn-principal{
+        font-size: 22px;
+        padding: 12px 12px;
+    }
+    #tab1-content{
+        flex-direction: column;
+        text-align: center;
+    }
+    #img-tab1{
+        width: 450px;
+    }
+    .btn-tab{
+        width: 270px;
+        height: 50px;
+        font-size: 14px;
+    }
+    #upper-tab2{
+        text-align: center;
+    }
+}
+@media (max-width: 720px){
+    #hero-title{
+        text-align: center;
+        font-size: 63px;
+    }
+    .title-tab{
+        font-size: 18px;
+    }
+    .btn-principal{
+        font-size: 20px;
+        padding: 10px 10px;
+    }
+    #img-tab1{
+        width: 400px;
+    }
+    #upper-tab2{
+        flex-direction: column;
+    }
+    #lower-tab2{
+        flex-direction: column;
+    }
+    .btn-tab{
+        width: 250px;
+        height: 50px;
+        font-size: 14px;
+    }
+    #tab3-content{
+        text-align: center;
+    }
+    .info{
+        width: 50%;
+    }
+}
