@@ -112,7 +112,6 @@ img{
 }
 .slc:hover{
     color:white;
-    border-bottom: var(--primary-color) 5px solid;
     cursor: pointer;
 }
 /* Tab 1 Content */
@@ -212,9 +211,9 @@ img{
 #tab2, #tab3{
     display: none;
 }
-/* .show{
-    display:block !important;
-} */
+.border{
+    border-bottom: var(--primary-color) 5px solid;
+}
 /* Footer Content */
 footer{
     color: #999;
